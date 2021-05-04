@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    background-color: #FAEBD7;
+}
+.jumbotron{
+    margin: 0px;
+}
+.about{
+    background-color: #FAEBD7;
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+}
+.services{
+    background-color: #DCDCDC;
+}
+.services .card{
+    background-color: #5F9EA0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-body span{
+    width:40px;
+    height:40px;
+    
+    border-radius:50%;
+    background-color:#FFFFFF;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: calibri;
+    font-weight:bold;
+    
+    
+}
+.clients{
+    text-align: center;
+}
+.client{
+    box-shadow:5px 10px 30px rgba(0,0,0,0.08);
+}
+.clients img{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+}
+.star i{
+    color:#ff9529;
+} 
+
+.blogs .card{
+    margin-bottom: 15px;
+} 

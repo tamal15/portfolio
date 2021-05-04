@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>personal portfolio</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="style.css">
+
+	<style>
+
+
+		body{
+    margin: 0;
+    background-color: #FAEBD7;
+}
+
+ul{
+			list-style:none;
+		}
+			a{
+			text-decoration:none;
+			color:orange;
+		}
+
+	nav{
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+
+			height:70px;
+			background-color:#FFFFFF;
+			box-shadow:2px 2px 2px rgba(0,0,0,0.2);
+			padding:0px 5%;
+		}
+
+
+			nav ul {
+			display:flex;
+		}
+
+		nav ul li a {
+			margin:30px;
+			font-family:myriad pro regular;
+			color:blue;
+			font-size:15px;
+			font-weight:700;
+		}
+
+		nav ul li{
+			color:blue;
+		}
+
+
+.jumbotron{
+    margin: 0px;
+}
+.about{
+    background-color: #FAEBD7;
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+}
+.services{
+    background-color: #DCDCDC;
+}
+.services .card{
+    background-color: #5F9EA0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-body span{
+    width:40px;
+    height:40px;
+    
+    border-radius:50%;
+    background-color:#FFFFFF;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: calibri;
+    font-weight:bold;
+    
+    
+}
+.clients{
+    text-align: center;
+}
+.client{
+    box-shadow:5px 10px 30px rgba(0,0,0,0.08);
+}
+.clients img{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+}
+.star i{
+    color:#ff9529;
+} 
+
+.blogs .card{
+    margin-bottom: 15px;
+} 
+.recent{
+	background-color:#DCDCDC;
+}
+
+#contact-btn h1{
+	font-size:2rem;
+	color:black;
+    font-weight:bold;
+	font-family:calibri;
+	margin:10px;
+	padding:5px;
+	letter-spacing: 4px;
+}
+
+#contact-btn{
+	width:100%;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+	height:200px;
+	background-color:white;
+	margin:20px 0px;
+	box-sizing:border-box;
+	box-shadow: 2px 0px 20px rgba(0,0,0,0.4);
+}
+
+#contact-btn a{
+	color:#FFFFFF;
+	font-size:1rem;
+	font-family:calibri;
+	width:150px;
+	height: 40px;
+	margin:10px;
+	background-color:#1e1e1e;
+	box-shadow:2px 5px 6px rgba(0,0,0,0.2);
+	display:flex;
+	justify-content: center;
+	align-content: center;
+}
+
+#contact-btn a:hover{
+	background-color:#17d1ac;
+	color:#000000;
+	transition: all ease 0.5s;
+	font-weight:700;
+}
+
+#contact-form{
+	width:100%;
+	height:50vh;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+}
+
+#contact-form form{
+	display:flex;
+	width:100%;
+	height:68vh;
+	background-color:#DCDCDC;
+	box-shadow:2px 12px 20px rgba(0,0,0,0.2);
+	border:1px solid rgba(255, 255, 255,0);
+}
+.contact-left{
+	width:40%;
+	height:100%;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact-right{
+	width:60%;
+	height:100%;
+	box-sizing: border-box;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-left:1px solid rgba(255,255,255,0.08);
+	
+}
+
+
+.c-l-heading{
+	font-family:calibri;
+	color:black;
+	font-size: 3rem;
+	letter-spacing: 2px;
+	font-weight:400;
+}
+
+.f-email, .f-name{
+	display:flex;
+	flex-direction: column;
+	font-family: calibri;
+}
+.f-email font,
+.f-name font{
+	color:black;
+	font-size:22px;
+}
+
+.f-email input,
+.f-name input{
+	height:30px;
+	width:250px;
+	border:none;
+	outline:none;
+	background-color:transparent;
+	border-bottom:1px solid #929292;
+	color:#FFFFFF;
+	mmargin:10px 0px;
+}
+
+.f-email input::placeholder,
+.f-name input::placeholder{
+	opacity:0.5;
+	letter-spacing: 1px;
+}
+
+
+
+.message font{
+	font-size: 30px;
+	color:black;
+	font-family: calibri;
+}
+.message{
+	margin:20px;
+	display:flex;
+	flex-direction: column;
+}
+
+.contact-right textarea{
+	width:100% !important;
+	height:320 !important;
+	border:320px;
+	outline:none;
+	background-color:transparent;
+	box-sizing: border-box;
+	color:black;
+	font-size: 16px;
+}
+
+.contact-right textarea::placeholder{
+	color:black;
+	font-size:18px;
+	letter-spacing: 2px;
+	font-family: calibri;
+}
+
+.contact-right button{
+	width:100%;
+	height:50px;
+	background-color:#1ed98b;
+	font-weight:bold;
+	outline:none;
+	border:none;
+	margin:0px;
+	color:#1b1b1b;
+	font-size:14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+	<section>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+
+				<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Something</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"></a>
+						</li>
+					</ul>
+				</div>
+		</nav>
+	</section>
+
+	<section>
+
+			<!--.. navigation......-->
+		<nav>
+			<!--logo...-->
+			<a href="#" class="logo"> Internet</a>
+			<!--menu..-->
+			<ul>
+				<li><a hef="#" class="active"></a>HOME</li>
+				<li><a hef="#"></a>ABOUT</li>
+				<li><a hef="#"></a>SERVICES</li>
+				<li><a hef="#"></a>PORTFOLIO</li>
+				<li><a hef="#"></a>BLOG</li>
+				<li><a hef="#"></a>CONTACT</li>
+
+
+			</ul>
+		</nav>
+		<div class="jumbotron">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+						<p>Hello</p>
+						<h1>I'M TAMAL</h1>
+						<p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive,
+							mobile-first
+							projects on the web.</p>
+						<p>This is some text.</p>
+						<p>This is another text.</p>
+
+						<button type="button" class="btn btn-dark">Hire Me</button>
+						<button type="button" class="btn btn-secondary br-0">Download CV</button>
+					</div>
+					<div class="col-md-6 text-center">
+						<img src="home/IMG_20210220_142457.jpg" height="40%" weight="50%" alt="">
+					</div>
+
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="about">
+			<div class="col-lg-12 p-5">
+				<h1>About Me</h1>
+				<p>Hello, My name is TAMAL SARKAR. I am a Devloper and also a Designer. If you have asany project or if
+					you want to make software for your bisnses contact me. I make as soon as possible. you really like
+					my work, if you don't i change this until you like i give you seticfaction result</p>
+				<p>I am a Devloper and also a Designer. If you have asany project or if you want make a software for you
+					business contact me. I make your project as soon as possible</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="services">
+		<div class="sevice p-5">
+			<div class="container">
+				<div class="col-lg-12 text-center">
+					<h1>Services</h1>
+					<p>Services required</p>
+					<p> if you want a software for you business contact me. I make as soon as possible. you really like
+						my work,
+						if you don't change this untilyou like if you want make a software for you business contact me.
+						i make
+						as soon</p>
+				</div>
+				<div class="row m-5 text-center">
+					<div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+						<div class="card">
+							<div class="card-body">
+								<span class="mx-auto d-block pt-2">1</span> <br> <br>
+								<h4 class="card-title">Web Design</h4>
+
+								<p class="details">If you want make a software for your bussniess contact me, i make as
+									soon as
+									possible, you really like my work, if you don't i change this until you like if you
+									want</p>
+
+
+							</div>
+							<div class="text-center m-4">
+								<a href="" class="card-link btn btn-light">Read more</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+						<div class="card">
+							<div class="card-body">
+								<span class="mx-auto d-block pt-2">1</span> <br> <br>
+								<h4 class="card-title">Web Design</h4>
+
+								<p class="details">If you want make a software for your bussniess contact me, i make as
+									soon as
+									possible, you really like my work, if you don't i change this until you like if you
+									want</p>
+
+
+							</div>
+							<div class="text-center m-4">
+								<a href="" class="card-link btn btn-light">Read more</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+						<div class="card">
+							<div class="card-body">
+								<span class="mx-auto d-block pt-2">1</span> <br> <br>
+								<h4 class="card-title">Web Design</h4>
+
+								<p class="details">If you want make a software for your bussniess contact me, i make as
+									soon as
+									possible, you really like my work, if you don't i change this until you like if you
+									want</p>
+
+
+							</div>
+							<div class="text-center m-4">
+								<a href="" class="card-link btn btn-light">Read more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</section>
+
+
+	<section>
+		<div class="container">
+			<div class="clients m-5">
+
+				<div class="col-lg-12">
+					<div class="client-heading">
+						<h1>Client Says</h1>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-lg-4 col-sm-12 mt-5 ml">
+							<div class="card" style="width: 18rem;">
+								<div class="client">
+									<img class="card-img-top mx-auto d-block mt-5" src="home/2  images.jpg"
+										alt="Card image cap">
+									<div class="card-body">
+										<h5 class="card-title">Card title</h5>
+										<div class="star">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+										</div>
+
+										<p class="card-text">Some quick example text to build on the card title and make
+											up the bulk of the card's content.</p>
+										<a href="#" class="btn btn-primary">Go somewhere</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+							<div class="card" style="width: 18rem;">
+								<div class="client">
+									<img class="card-img-top mx-auto d-block mt-5" src="home/2  images.jpg"
+										alt="Card image cap">
+									<div class="card-body">
+										<h5 class="card-title">Card title</h5>
+										<div class="star">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+										</div>
+										<p class="card-text">Some quick example text to build on the card title and make
+											up the bulk of the card's content.</p>
+										<a href="#" class="btn btn-primary">Go somewhere</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+							<div class="card" style="width: 18rem;">
+								<div class="client">
+									<img class="card-img-top mx-auto d-block mt-5" src="home/2  images.jpg"
+										alt="Card image cap">
+									<div class="card-body">
+										<h5 class="card-title">Card title</h5>
+										<div class="star">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+										</div>
+										<p class="card-text">Some quick example text to build on the card title and make
+											up the bulk of the card's content.</p>
+										<a href="#" class="btn btn-primary">Go somewhere</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="recent">
+		<div class="container">
+            <h1 class="text-center txt-style m-5">Recent Works</h1>
+
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="home/creative 2  images.jpg" style="width:450px; height: 200px; " class="img-fluid">
+                        </div>
+
+                        <div class="card-body">
+                            <h4 class="card-title">Post Title</h4>
+                            <p class="card-text">
+
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="card-link btn btn-secondary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="home/creative 2  images.jpg" style="width:450px; height: 200px; " class="img-fluid">
+                        </div>
+
+                        <div class="card-body">
+                            <h4 class="card-title">Post Title</h4>
+                            <p class="card-text">
+
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="card-link btn btn-secondary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="home/creative 2  images.jpg" style="width:450px; height: 200px; " class="img-fluid">
+                        </div>
+
+                        <div class="card-body">
+                            <h4 class="card-title">Post Title</h4>
+                            <p class="card-text">
+
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="card-link btn btn-secondary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="home/creative 2  images.jpg" style="width:450px; height: 200px; " class="img-fluid">
+                        </div>
+
+                        <div class="card-body">
+                            <h4 class="card-title">Post Title</h4>
+                            <p class="card-text">
+
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="card-link btn btn-secondary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="home/creative 2  images.jpg" style="width:450px; height: 200px; " class="img-fluid">
+                        </div>
+
+                        <div class="card-body">
+                            <h4 class="card-title">Post Title</h4>
+                            <p class="card-text">
+
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="card-link btn btn-secondary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="home/creative 2  images.jpg" style="width:450px; height: 200px; " class="img-fluid">
+                        </div>
+
+                        <div class="card-body">
+                            <h4 class="card-title">blog Title</h4>
+                            <p class="card-text">
+
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="card-link btn btn-secondary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+
+
+	<section id="contact-btn">
+		<h1>If you have any project in your mind?</h1>
+		<a href="#">Contect Me</a>
+	</section>
+	<section id="contact-form">
+		<form>
+			<div class="contact-left">
+				<h1 class="c-l-heading">write us</h1>
+					<div class="f-name">
+				<div class="name">
+					
+				<font>Name</font>
+				<input type="text" placeholder="Full Name">
+		
+			
+
+
+				
+			</div>
+
+           <div class="f-email">
+			<div class="email">
+
+				<font>Email</font>
+				<input type="text" placeholder="Example@gmail.com">
+			</div>
+
+
+			<div class="contact-right">
+				<div class="message">
+					<font>Message</font>
+					<textarea name="message" rows="5" cols="20" placeholder="write Message..."></textarea>
+					
+				</div>
+				<button>submit</button>
+			</div>
+		</div>
+	</form>
+</section>
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>
